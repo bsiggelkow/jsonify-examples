@@ -1,0 +1,20 @@
+json.name "Garrett Bjerkhoel"
+json.birthday Time.local(1991, 9, 14)
+json.street do
+  json.address "1143 1st Ave"
+  json.address2 "Apt 200"
+  json.city "New York"
+  json.state "New York"
+  json.zip 10065
+end
+json.skills do
+  json.ruby true
+  json.asp false
+  json.php true
+  json.mysql true
+  json.mongodb true
+  json.haproxy true
+  json.marathon false
+end
+json.single_skills ['ruby', 'php', 'mysql', 'mongodb', 'haproxy']
+json.booleans [true, true, false, nil]

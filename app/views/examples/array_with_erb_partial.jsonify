@@ -1,0 +1,2 @@
+json << 1
+json << {:date => (render :partial => 'today')}
