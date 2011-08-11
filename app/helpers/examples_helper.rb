@@ -4,4 +4,8 @@ module ExamplesHelper
       File.readlines(File.join(ActionController::Base.view_paths.first,'examples',"#{name}.jsonify")).join("\n")
     end
   end
+  
+  def json(content)
+    content.to_json.html_safe
+  end
 end
