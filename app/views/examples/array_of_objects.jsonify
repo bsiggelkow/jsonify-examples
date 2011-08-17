@@ -1,0 +1,3 @@
+@foos.each do |v|
+  json.append! v.value
+end

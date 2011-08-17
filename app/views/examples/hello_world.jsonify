@@ -1,4 +1,12 @@
-json.hello 'world'
-json.goodbye 'mr. chips'
-json.nyan 'cat'
-json.tag! "yo quero", 'taco bell'
+# json.hello 'world'
+# json.goodbye 'mr. chips'
+# #json.nyan 'cat'
+# json.tag! "yo quero", 'taco bell'
+
+@links = [
+  ['self',   'http://example.com/people/123'],
+  ['school', 'http://gatech.edu'],
+]
+json.links(@links) do |link|
+  {:rel => link.first, :href => link.last}
+end
