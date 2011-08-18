@@ -1,28 +1,30 @@
 <h1>Jsonify Examples</h1>
-  <h2>Hello World</h2>
-  <a class='toggle' href="#">show</a>
   <div id='hello_world' class='example'>
-    <div class='source'>
-      <%= jsonify_content 'hello_world' %>
-    </div>
+    <h2>Hello World</h2>
+    <a class='template' href='/examples/hello_world'>template</a>
     <a class='render' href='/examples/hello_world'>renders</a>
-    <div class='result'></div>
+    <pre class="source language-ruby">
+<%= jsonify_content 'hello_world' %>
+    </pre>
+    <pre class='result language-javascript'></pre>
   </div>
   <div id='complex_object' class='example'>
     <h2>Complex Object</h2>
-    <div class='source'>
-      <%= jsonify_content 'complex_object' %>
-    </div>
+    <a class='template' href='/examples/complex_object'>template</a>
     <a class='render' href='/examples/complex_object'>renders</a>
-    <div class='result'></div>
+    <pre class="source language-ruby">
+<%= jsonify_content 'complex_object' %>
+    </pre>
+    <pre class='result language-javascript'></pre>
   </div>
   <div id='array_of_objects' class='example'>
     <h2>Array of Objects</h2>
-    <div class='source'>
-      <%= jsonify_content 'array_of_objects' %>
-    </div>
+    <a class='template' href='/examples/array_of_objects'>template</a>
     <a class='render' href='/examples/array_of_objects'>renders</a>
-    <div class='result'></div>
+    <pre class="source language-ruby">
+<%= jsonify_content 'array_of_objects' %>
+    </pre>
+    <pre class='result language-javascript'></pre>
   </div>
 </ul>
 

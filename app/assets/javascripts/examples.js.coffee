@@ -2,12 +2,28 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-register_link = (target) ->
+registerLink = (target) ->
   name = target.href.match(/\/(\w+)$/)[1]
   $.get target.href, (data) ->
     $("##{name} .result").html data
+    $("##{name} .result").slideToggle()
   false
 
-jQuery -> 
+toggleTemplate = (target) ->
+  name = target.href.match(/\/(\w+)$/)[1]
+  $("##{name} .source").slideToggle()
+  false
+
+jQuery ->
+  $("pre.language-ruby").snippet "ruby",
+    style: "neon"
+    showNum: false
+    menu: false
+  $("pre.language-javascript").snippet "javascript",
+    style: 'desert'
+    showNum: false
+    menu: false
+  $('a.template').click (event) ->
+    toggleTemplate event.target
   $('a.render').click (event) ->
-    register_link event.target
+    registerLink event.target

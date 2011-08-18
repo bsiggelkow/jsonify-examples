@@ -2,6 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.source {
-  border: 1px dotted black;
+div.example {
+  width: 100%;
+  clear:both;
+}
+
+div.example pre.source {
+  width: 45%;
+  float: left;
+  display: none;
+}
+
+div.example pre.result {
+  float: right;
+  width: 45%;
+  display: none;
+}
+
+.clear {
+  clear: both;
+}
+
+a.template {
+  margin-left: 5%;
+}
+
+a.render {
+  margin-left: 47%;
+}
+h1, h2 {
+  font-family: 'Love Ya Like A Sister', cursive;
+}
+h1 {
+  text-align: center;
+  font-size: 6em;
+}
+h2 {
+  font-size: 3em;
+  margin-bottom: -5px;
 }

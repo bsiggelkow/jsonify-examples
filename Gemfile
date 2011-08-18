@@ -17,7 +17,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'jsonify-rails'
+gem 'jsonify-rails', :path => '~/work/jsonify-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
