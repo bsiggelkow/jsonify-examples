@@ -12,7 +12,19 @@ registerLink = (target) ->
 toggleTemplate = (target) ->
   name = target.href.match(/\/(\w+)$/)[1]
   $("##{name} .source").slideToggle()
+  $(target).siblings('a.render').toggle()
   false
+
+lastTrySource = '';
+
+evalJsonify = (target) ->
+  lastTrySource = $.trim $('#try_source').val()
+  $.post "/examples/eval_jsonify", {try_source: lastTrySource}, (data) ->
+    $('#try_result').html data
+
+trySource = (target) ->
+  evalJsonify(event.target) if $.trim( $('#try_source').val() ) != lastTrySource
+  
 
 jQuery ->
   $("pre.language-ruby").snippet "ruby",
@@ -27,3 +39,7 @@ jQuery ->
     toggleTemplate event.target
   $('a.render').click (event) ->
     registerLink event.target
+  $('textarea#try_source')
+    .focus()
+    .keyup (event) ->
+      trySource(event.target)
