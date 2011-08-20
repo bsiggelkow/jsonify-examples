@@ -19,7 +19,7 @@ lastTrySource = '';
 
 evalJsonify = (target) ->
   lastTrySource = $.trim $('#try_source').val()
-  $.post "/examples/eval_jsonify", {try_source: lastTrySource}, (data) ->
+  $.post "/try/eval_jsonify", {try_source: lastTrySource}, (data) ->
     $('#try_result').html data
 
 trySource = (target) ->
