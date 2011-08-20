@@ -1,7 +1,3 @@
-@links = [
-  ['self',   'http://example.com/people/123'],
-  ['school', 'http://gatech.edu'],
-]
-json.links(@links) do |link|
-  {:rel => link.first, :href => link.last}
-end
+# The "json" variable is the Jsonify::Builder
+json.hello 'world'
+json.goodbye 'universe'

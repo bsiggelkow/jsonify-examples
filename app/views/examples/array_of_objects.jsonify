@@ -1,4 +1,10 @@
-@foos = [Foo.new('bar'),Foo.new('baz')]
-@foos.each do |v|
-  json.append! v.value
+@people = [
+  Person.new( 'Lone', 'Star' ), 
+  Person.new( 'Barf', 'Olomew' )
+]
+@people.each do |p|
+  json.append!({ 
+    given_name: p.first_name, 
+    last_name: p.last_name 
+  })
 end

@@ -14,6 +14,7 @@ $link-color: #CC5318;
 body {
   font-family: Courier;
   color: $body-color;
+  background-color: #FFFEC5;
 }
 .clear {
   clear: both;
@@ -33,13 +34,13 @@ h2 {
 }
 
 div#footer {
-  font-family: 'Love Ya Like A Sister', cursive;  
   width: 100%;
   text-align:center;
 }
 
 a {
   color: $link-color;
+  text-decoration: none;
 }
 
 div#footer a {

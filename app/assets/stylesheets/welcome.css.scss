@@ -1,15 +1,22 @@
-h1 {
+div#welcome h1 {
+  font-size: 8em;
   margin-top: 50px;
+}
+
+div#welcome h2 {
+  font-size: 2em;
+  margin-top: 50px;
+  font-family: 'Love Ya Like A Sister', cursive;
 }
 
 div#welcome {
   margin-top: 150px;
 }
+
 p {
   font-size: 2em;
-  margin-top: 150px;
+  margin-top: 100px;
   text-align: center;
-  font-family: 'Love Ya Like A Sister', cursive;  
 }
 
 p a {
