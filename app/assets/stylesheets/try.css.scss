@@ -1,0 +1,27 @@
+.try-region {
+  background-color: #04003E;
+  padding: 10px;
+  color: #DEF;
+  font-family: Courier;
+  font-size: 0.8em;
+  font-weight: normal;
+  border: 10px solid lightblue;
+  border-radius: 16px;
+  width: 45%;
+}
+textarea#try_source {
+  margin-top: 10px;
+  float: left;
+  width:45%;
+  height: 450px;
+}
+
+textarea#try_source:focus { outline: none; }
+
+pre#try_result {
+  background-color: lightblue;
+  float: right;
+  height: 447px;
+  border-color:  #04003E;
+  color: black;
+}

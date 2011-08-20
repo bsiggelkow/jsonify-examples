@@ -2,14 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$body-color: #375469;
-$heading-bg: #F87171;
-
-body {
-  font-family: Courier;
-  color: $body-color;
-}
-
 div.example {
   width: 100%;
   clear:both;
@@ -27,10 +19,6 @@ pre.result {
   display: none;
 }
 
-.clear {
-  clear: both;
-}
-
 a.template {
   margin-left: 5%;
 }
@@ -39,47 +27,9 @@ a.render {
   display: none;
   margin-left: 47%;
 }
-h1 {
-  font-family: 'Love Ya Like A Sister', cursive;  
-  text-align: center;
-  font-size: 6em;
-  margin-top: -10px;
-  margin-bottom: -5px;
-}
-h2 {
-  font-size: 2em;
-  text-align:center;
-}
+
 ul#examples > li {
   list-style-type: none;
   margin-left: -36px;
   margin-bottom: 20px;
-}
-
-.try-region {
-  background-color: #04003E;
-  padding: 10px;
-  color: #DEF;
-  font-family: Courier;
-  font-size: 0.8em;
-  font-weight: normal;
-  border: 10px solid lightblue;
-  border-radius: 16px;
-  width: 45%;
-}
-textarea#try_source {
-  margin-top: 10px;
-  float: left;
-  width:45%;
-  height: 450px;
-}
-
-textarea#try_source:focus { outline: none; }
-
-pre#try_result {
-  background-color: lightblue;
-  float: right;
-  height: 447px;
-  border-color:  #04003E;
-  color: black;
 }

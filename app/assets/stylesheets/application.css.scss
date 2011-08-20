@@ -7,3 +7,26 @@
  *= require_self
  *= require_tree . 
 */
+$body-color: #375469;
+$heading-bg: #F87171;
+
+body {
+  font-family: Courier;
+  color: $body-color;
+}
+.clear {
+  clear: both;
+}
+
+h1 {
+  font-family: 'Love Ya Like A Sister', cursive;  
+  text-align: center;
+  font-size: 6em;
+  margin-top: -10px;
+  margin-bottom: -5px;
+}
+
+h2 {
+  font-size: 2em;
+  text-align:center;
+}
