@@ -9,6 +9,7 @@
 */
 $body-color: #375469;
 $heading-bg: #F87171;
+$link-color: #CC5318;
 
 body {
   font-family: Courier;
@@ -37,9 +38,13 @@ div#footer {
   text-align:center;
 }
 
+a {
+  color: $link-color;
+}
+
 div#footer a {
   margin-left: 20px;
   margin-right: 20px;
   text-decoration: dotted;
-  color: #8B4799;  
+  color: $link-color;  
 }

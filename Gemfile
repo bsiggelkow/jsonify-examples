@@ -1,12 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc5'
-
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-# gem 'sqlite3'
-
+gem 'rails', '3.1.0.rc6'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -17,16 +11,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'jsonify-rails', :path => '~/work/jsonify-rails'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'jsonify-rails'
 
 group :development, :test do
   # Pretty printed test output
