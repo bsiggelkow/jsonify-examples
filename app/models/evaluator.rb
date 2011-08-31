@@ -6,12 +6,12 @@ class Evaluator
     @json = ::Jsonify::Builder.new(:format => :pretty)
     @sandbox = EvaluatorSandbox.new(json)
     @blacklist = %w( Process Kernel class module eval class_eval module_eval 
-                     Proc lambda require `)
+                     Proc lambda require script `)
   end
 
   def evaluate
     begin
-      raise "potential malicious script" if blacklist.any?{ |word| source.include? word }
+      raise "potential malicious script" if blacklist.any?{ |word| source =~ /#{word}/i }
       result = lambda do
         $SAFE = 3
         sandbox.instance_eval source
