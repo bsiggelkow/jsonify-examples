@@ -50,10 +50,10 @@ GEM
     jquery-rails (1.0.13)
       railties (~> 3.0)
       thor (~> 0.14)
-    jsonify (0.1.2)
-    jsonify-rails (0.0.8)
-      actionpack (>= 3.0.0)
-      jsonify
+    jsonify (0.2.0)
+    jsonify-rails (0.2.0)
+      actionpack
+      jsonify (>= 0.2.0)
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -127,7 +127,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.1.0.rc)
   jquery-rails
-  jsonify-rails
+  jsonify-rails (~> 0.2.0)
   rails (= 3.1.0.rc6)
   rspec-rails
   sass-rails (~> 3.1.0.rc)

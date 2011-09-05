@@ -11,7 +11,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'jsonify-rails'
+gem 'jsonify-rails', " ~> 0.2.0"
 
 group :development, :test do
   # Pretty printed test output
