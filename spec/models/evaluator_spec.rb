@@ -1,5 +1,4 @@
 describe Evaluator do
-
   describe 'security' do
 
     %W(Process script SCRIPT).each do |word|
@@ -8,5 +7,6 @@ describe Evaluator do
         e.evaluate.should == "parse error"
       end
     end
+
   end
 end
