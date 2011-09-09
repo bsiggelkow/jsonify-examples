@@ -7,7 +7,9 @@ class TryController < ApplicationController
   def eval_jsonify
     e = Evaluator.new params[:try_source]
     result = 'Stop being naughty!'
-    (Thread.new {result = e.evaluate}).join(1)
+    t = Thread.new {result = e.evaluate}
+    status = t.join(1)
+    t.kill unless status
     render :text => result
   end
 
