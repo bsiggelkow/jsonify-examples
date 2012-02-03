@@ -2,10 +2,13 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+prettify = (json) ->
+  try JSON.stringify(JSON.parse(json), null, 4)
+
 registerLink = (target) ->
   name = target.href.match(/\/(\w+)$/)[1]
   $.get target.href, (data) ->
-    $("##{name} .result").html data
+    $("##{name} .result").html prettify(data)
     $("##{name} .result").slideToggle()
   false
 
@@ -20,7 +23,7 @@ lastTrySource = '';
 evalJsonify = (target) ->
   lastTrySource = $.trim $('#try_source').val()
   $.post "/try/eval_jsonify", {try_source: lastTrySource}, (data) ->
-    $('#try_result').html data
+    $('#try_result').html prettify(data)
 
 trySource = (target) ->
   evalJsonify(event.target) if $.trim( $('#try_source').val() ) != lastTrySource

@@ -13,12 +13,15 @@ class Evaluator
     begin
       raise "potential malicious script" if blacklist.any?{ |word| source =~ /#{word}/i }
       result = lambda do
-        $SAFE = 3
-        sandbox.instance_eval source
-        json.compile!
+        # $SAFE = 3
+        # begin
+          sandbox.instance_eval source
+          json.compile!
+        # end
       end.call
+    rescue SyntaxError
+      puts "Processing ..."
     rescue
-      puts $!
       "parse error"
     end
   end

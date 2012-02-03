@@ -42,8 +42,5 @@ module JsonifyExamples
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    
-    # pretty format Jsonify templates
-    config.jsonify_format = :pretty
   end
 end
