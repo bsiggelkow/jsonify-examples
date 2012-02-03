@@ -2,6 +2,6 @@ class ExamplesController < ApplicationController
 
   respond_to :json
   
-  layout 'application', :only => [:index]
+  layout false, :except => [:index]
   
 end
